@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Danh sách công việc</title>
+</head>
+<body>
+<h1>Danh sách công việc</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Tiêu đề</th>
+        <th>Mô tả</th>
+        <th>Lương</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="job : ${jobs}">
+        <td th:text="${job.title}"></td>
+        <td th:text="${job.description}"></td>
+        <td th:text="${job.salary}"></td>
+    </tr>
+    </tbody>
+</table>
+<button onclick="location.href='http://localhost:8080/'">Quay lại trang chủ</button>
+</body>
+</html>

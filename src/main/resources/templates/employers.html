@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Danh sách nhà tuyển dụng</title>
+</head>
+<body>
+<h1>Danh sách nhà tuyển dụng</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Tên nhà tuyển dụng</th>
+    <th>Địa chỉ</th>
+    <th>Số điện thoại</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="employer : ${employers}">
+    <td th:text="${employer.name}">Tên nhà tuyển dụng</td>
+    <td th:text="${employer.address}">Địa chỉ</td>
+    <td th:text="${employer.phoneNumber}">Số điện thoại</td>
+  </tr>
+  </tbody>
+</table>
+<button onclick="location.href='http://localhost:8080/'">Quay lại trang chủ</button>
+
+</body>
+</html>

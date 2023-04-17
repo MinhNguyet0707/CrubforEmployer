@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Job Hunt - Danh sách ứng viên</title>
+</head>
+<body>
+<h1>Job Hunt - Danh sách ứng viên</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Họ tên</th>
+    <th>Email</th>
+    <th>Số điện thoại</th>
+    <th>Địa chỉ</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="applicant : ${applicants}">
+    <td th:text="${applicant.name}"></td>
+    <td th:text="${applicant.email}"></td>
+    <td th:text="${applicant.phoneNumber}"></td>
+    <td th:text="${applicant.address}"></td>
+  </tr>
+  </tbody>
+  <button onclick="location.href='http://localhost:8080/'">Quay lại trang chủ</button>
+</table>
+</body>

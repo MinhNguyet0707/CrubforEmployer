@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Thêm nhà tuyển dụng</title>
+</head>
+<body>
+<h1>Thêm nhà tuyển dụng</h1>
+<form method="post" th:action="@{/employers/save}" th:object=${employer}>
+  <div>
+    <label for="name">Tên nhà tuyển dụng:</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+  <div>
+    <label for="location">Địa chỉ:</label>
+    <input type="text" id="location" name="address" required>
+  </div>
+  <div>
+    <label for="location">Số đt:</label>
+    <input type="text" id="phoneNumber" name="phoneNumber" required>
+  </div>
+  <div>
+    <button type="submit">Thêm nhà tuyển dụng</button>
+  </div>
+</form>
+</body>
+</html>
